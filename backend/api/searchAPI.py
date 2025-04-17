@@ -32,7 +32,6 @@ class recipeSearch(Resource):
         query = f"SELECT * FROM Recipes WHERE"
         query += sub_qs[0]
         for i in sub_qs[1:]: query += f" AND {i}"
-        print(args,query,sub_qs)
         fetcher = db.session.execute(text(query))
 
         if fetcher:

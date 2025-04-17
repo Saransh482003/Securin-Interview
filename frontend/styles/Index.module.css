@@ -1,11 +1,3 @@
-/* .resultsPlaceHolder{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    height: 30rem;
-    width: 100%;
-} */
 .pageHeader{
     display: flex;
     flex-direction: column;
@@ -24,9 +16,75 @@
     font-weight:600;
     color: white;
     text-align: center;
-    margin-top:1rem;
+    margin-top:0rem;
     letter-spacing:0.2rem;
 }
+.description{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    /* background-color: aqua; */
+    margin-top: 5rem;
+}
+.extraInfo{
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+    height: max-content;
+    background-color: rgb(241, 241, 241);
+    padding: 2rem;
+    font-size: 1.5rem;
+}
+.tableSection{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    height: 70vh;   
+    /* background-color: aqua; */
+    margin-top: 5rem;
+}
+.tableContent{
+    width: 90%;
+    /* background-color: aquamarine; */
+    align-items: center;
+    /* padding: 1rem; */
+}
+.thead  .tdata{
+    background-color: black;
+    color: white;
+}
+.tdata{
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    width: max-content;
+    background-color: rgb(241, 241, 241);
+    /* border-right: 2px solid black; */
+    font-size: 1.5rem;
+    padding: 1.5rem 0rem 1.5rem 0rem;
+    margin-right: 0%;
+}
+.trow > .tdata:first-child{
+    border-bottom-left-radius: 0.5rem;
+    border-top-left-radius: 0.5rem;
+}
+.trow > .tdata:last-child{
+    border-bottom-right-radius: 0.5rem;
+    border-top-right-radius: 0.5rem;
+}
+.trow{
+    margin: 0.5rem 0rem 0.5rem 0rem;
+}
+.tbody > .trow:hover{
+    background-color: rgb(255, 196, 0)!important;
+    cursor: pointer;
+}
+
+
+
+
 
 @media (max-width: 1300px){
     .teachs{

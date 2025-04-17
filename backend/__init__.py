@@ -3,6 +3,7 @@ from flask_cors import CORS
 from flask_caching import Cache
 from .models import db
 from .api.recipieAPI import api_recipie
+from .api.searchAPI import api_search
 
 # Flask Initialisation
 app = Flask(__name__)
@@ -14,3 +15,4 @@ db.init_app(app)
 CORS(app)
 
 app.register_blueprint(api_recipie, url_prefix="/api/recipes")
+app.register_blueprint(api_search, url_prefix="/api/recipes/search")

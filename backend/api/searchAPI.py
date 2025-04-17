@@ -4,16 +4,16 @@ from sqlalchemy.sql.expression import func, desc, case, exists
 from backend.models import Recipes
 import json
 
-api_recipie = Blueprint("api_recipie",__name__)
-api_r = Api(api_recipie)
+api_search = Blueprint("api_search",__name__)
+api_s = Api(api_search)
 
 
-class recipieAll(Resource):
+class recipeSearch(Resource):
     def get(self):
         args = request.args.to_dict()
-        page = int(args["page"]) if "page" in args else 1
-        limit = int(args["limit"]) if "limit" in args else 10
-        offset = limit*(page-1)
+        # calories = int(args["calories"]) if "calories" in args else None
+        # limit = int(args["limit"]) if "limit" in args else 10
+        # offset = limit*(page-1)
         
         fetcher = Recipes.query.filter(Recipes.rating != "NULL").order_by(desc(Recipes.rating)).offset(offset).limit(limit).all()
         if fetcher:
@@ -35,4 +35,4 @@ class recipieAll(Resource):
         abort(400, message= "No data exists")
 
 
-api_r.add_resource(recipieAll,"/")
+api_s.add_resource(recipeSearch,"/")

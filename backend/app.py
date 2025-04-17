@@ -17,11 +17,13 @@ from .insertDB import insertDB
 def index():
     return {"message":"Hello"}
 
-@app.route("/all-recipes", methods=["GET"])
-def all_recipes():
-    url = f"http://127.0.0.1:5000/api/recipes"
-
-    return {"message":"Hello"}
+# @app.route("/all-recipes", methods=["GET"])
+# def all_recipes():
+#     args = request.args.to_dict()
+#     page = args["page"] if "page" in args else 1
+#     limit = args["limit"] if "limit" in args else 10
+#     url = f"http://127.0.0.1:5000/api/recipes?page={page}&limit={limit}"
+#     return {"message":"Hello"}
 
 
 
